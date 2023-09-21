@@ -41,7 +41,7 @@ export const ContextProvider = ({children}) => {
       setNotification
     }}>
       {children}
-    </StateContext.Provider>
+     </StateContext.Provider>
   );
 }
 
