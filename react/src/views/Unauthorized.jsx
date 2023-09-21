@@ -1,16 +1,31 @@
-import { useNavigate } from "react-router-dom";
+import {BsExclamationTriangle} from "react-icons/bs";
 
 const Unauthorized = () => {
-  const navigate = useNavigate();
-
-  const goBack = () => navigate(-1);
 
   return (
     <div>
-      <h1>Unauthorized</h1>
-      <p>You do not have access to the requested page.</p>
-      <div>
-        <button onClick={goBack}>Go Back</button>
+      <div className="container py-5">
+        <div className="row">
+          <div className="col-md-2 text-center">
+            <p>
+              <BsExclamationTriangle size={80}/>
+              <br />
+              Status Code: 403
+            </p>
+          </div>
+          <div className="col-md-10">
+            <h3>OPPSSS!!!! Sorry...</h3>
+            <p>
+              Sorry, your access is refused due to security reasons of our
+              server and also our sensitive data.
+              <br />
+              Please go back to the previous page to continue browsing.
+            </p>
+            <a className="btn btn-danger" href="javascript:history.back()">
+              Go Back
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
