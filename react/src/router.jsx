@@ -8,6 +8,8 @@ import Signup from "./views/Signup";
 import Users from "./views/Users";
 import RequireAuth from "./views/RequireAuth.jsx";
 import Unauthorized from "./views/Unauthorized.jsx";
+import ListProduct from "./views/inventory/ListProduct.jsx";
+import CreateProduct from "./views/inventory/CreateProduct.jsx";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +33,15 @@ const router = createBrowserRouter([
           },
         ],
       },
+      {
+        path: "/product",
+        element: <ListProduct />,
+      },
+      {
+        path: "/product/create",
+        element: <CreateProduct />,
+      },
+
     ],
   },
   {

@@ -1,10 +1,10 @@
-import { useState } from 'react'
+import React from 'react'
+import ListProduct from './views/inventory/ListProduct'
 
 function Dashboard() {
-
   return (
     <div>
-        <h1>Inventory</h1>
+      <ListProduct/>
     </div>
   )
 }
