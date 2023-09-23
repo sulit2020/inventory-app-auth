@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocation, Navigate } from "react-router-dom";
 import { useStateContext } from "../context/ContextProvider";
 import axiosClient from "../axios-client";
+import Dashboard from "../Dashboard";
 
 const RequireAuth = ({ children }) => {
   const { user, setUser } = useStateContext();
@@ -11,8 +12,6 @@ const RequireAuth = ({ children }) => {
       setUser(data);
     });
   }, []);
-
-  console.log(user.role);
 
   const USER_TYPE = user.role;
 
@@ -24,7 +23,7 @@ const RequireAuth = ({ children }) => {
   const CURRENT_USER_TYPE = USER_TYPE;
 
   if (CURRENT_USER_TYPE === USER_TYPES.Admin) {
-    return <>{children}</>;
+    return <><Dashboard/></>;
   } else {
     return <Navigate to="/unauthorized" state={{ from: location }} replace />;
   }

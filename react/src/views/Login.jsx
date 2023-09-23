@@ -44,8 +44,8 @@ export default function Login() {
           </div>
           <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
             <form onSubmit={onSubmit}>
-              <div className="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
-                <p className="lead fw-normal mb-0 me-3">Sign in your account</p>
+              <div className="d-flex flex-row align-items-center justify-content-center justify-content-lg-start mb-4">
+                <p className="lead fw-normal mb-0 me-3">Sign in to your account</p>
               </div>
               <div className="form-outline mb-4">
                 <input

@@ -1,6 +1,10 @@
 import {BsExclamationTriangle} from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 const Unauthorized = () => {
+  const navigate = useNavigate();
+
+  const goBack = () => navigate(-1);
 
   return (
     <div>
@@ -21,9 +25,9 @@ const Unauthorized = () => {
               <br />
               Please go back to the previous page to continue browsing.
             </p>
-            <a className="btn btn-danger" href="javascript:history.back()">
-              Go Back
-            </a>
+            <div >
+                <button className="btn btn-danger" onClick={goBack}>Go Back</button>
+            </div>
           </div>
         </div>
       </div>
